@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/activity_fucker"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/fab_margin"
+    android:paddingRight="@dimen/fab_margin"
+    android:paddingTop="@dimen/fab_margin"
+    tools:context="com.htetznaing.samfontstyles.Fucker">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:textColor="#fff"
+                        android:background="#2ecc71"
+                        android:onClick="installFont"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Install"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:background="#9b59b6"
+                        android:textColor="#fff"
+                        android:onClick="changeFont"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="Change"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ads:adUnitId="ca-app-pub-1325188641119577/3076195495">
+            </com.google.android.gms.ads.AdView>
+
+            <TextView
+                android:layout_above="@id/adView"
+                android:id="@+id/textView"
+                android:textColor="#ff0000"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Install ကိုနှိပ်ပြီး Font APK ကို Install လုပ်ပေးပါ။
+ပြီးလျှင် Change Font ကိုနှိပ်ပြီး
+ကိုရွေးပေးလိုက်ပါ။
+အဲ့ဖောင့်နာမည်နဲ့ နှစ်ခုရှိနေတာကို တွေ့ရပါလိမ့်မယ်။
+အပေါ်တစ်ခုကိုအရင်ရွေးပါ မရရင်အောက်တစ်ခုကိုရွေးပေးလိုက်ပါ။
+တစ်ခုပဲပေါ်သေးရင် ဖုန်းကို Restart ချပြီး(ပိတ်ပြီးပြန်ဖွင့်) မှပြန်လာရွေးပါ။"
+                android:layout_below="@id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
